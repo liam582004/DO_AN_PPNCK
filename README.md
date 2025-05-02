@@ -40,7 +40,7 @@ Mọi vấn đề về chia nhiệm vụ cho từng thành viên được ghi l�
 |-------------------|-------------------------------------------------|------------------------------------------------|-------------------------------------------------|
 | Hồ Hưng Lộc       | [hohungloc58@gmail.com](mailto:hohungloc58@gmail.com) | [github.com/liam582004](https://github.com/liam582004) | [liam582004.github.io/portfolio-cv](https://liam582004.github.io/portfolio-cv/) |
 | Nguyễn Trường Sinh | [emailcuasinh@gmail.com](mailto:emailcuasinh@gmail.com) | [github.com/SN1PE7](https://github.com/SN1PE7) | [sn1pe7.github.io](https://sn1pe7.github.io/) |
-| Hoàng Sỹ Khiêm    | [emailcuakiem@gmail.com](mailto:emailcuakiem@gmail.com) | [github.com/khiemHoang141](https://github.com/khiemHoang1410) | [khiemhoang1410.github.io](https://khiemhoang1410.github.io) |
+| Hoàng Sỹ Khiêm    | [sgu3121410263@gmail.com](sgu3121410263@gmail.com) | [github.com/khiemHoang141](https://github.com/khiemHoang1410) | [khiemhoang1410.github.io](https://khiemhoang1410.github.io) |
 
 
 
