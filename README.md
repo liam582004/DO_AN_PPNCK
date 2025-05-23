@@ -31,11 +31,11 @@ Dự án này tập trung vào việc phân loại cảm xúc trong các câu ti
 
 Bộ dữ liệu bao gồm các câu tiếng Anh được gán nhãn với 6 loại cảm xúc:
 
-- Vui (Joy)
-- Buồn (Sadness)
-- Giận dữ (Angry)
-- Ngạc nhiên (Surprise)
-- Yêu thương (Love)
+- Vui 😄
+- Buồn 😢
+- Giận dữ 😠
+- Ngạc nhiên 😲
+- Yêu thương 😄
 
 ### 🧪 Quy trình thực hiện
 
@@ -52,10 +52,10 @@ Bộ dữ liệu bao gồm các câu tiếng Anh được gán nhãn với 6 lo�
 Dự án này triển khai một mô hình học sâu LSTM để phân loại cảm xúc trong các đánh giá sản phẩm thành 5 loại cảm xúc chính: **Giận dữ, Vui vẻ, Yêu thương, Buồn bã, Ngạc nhiên**.
 
 ## 📁 Dữ liệu
-
-- **Tập huấn luyện**: `reviews_train.txt`
-- **Tập kiểm tra**: `reviews_test.txt`
-- **Tập validation**: `reviews_val.txt`
+ Amazon Product Reviews 2023 (truy cập tại https://amazon-reviews-2023.github.io), 
+- **Tập huấn luyện**: 561136 mẫu, chiếm ~80% tổng dữ liệu] 
+- **Tập kiểm tra**: 70142 mẫu, chiếm ~10% tổng dữ liệu
+- **Tập validation**: 70143 mẫu, chiếm ~10% tổng dữ liệu 
 
 ### 📌 Cách gán nhãn:
 Dựa vào số sao người dùng đánh giá sản phẩm:
@@ -78,6 +78,9 @@ Dựa vào số sao người dùng đánh giá sản phẩm:
 - **Epochs**: 8
 
 ## 📊 Kết quả huấn luyện
+
+![Đồ thị độ chính xác và hàm mất mát](images/c06c6534-1410-490c-ad24-207c9c109584.png)
+
 
 - **Độ chính xác trên tập huấn luyện**: > 0.95
 - **Độ chính xác trên tập validation**: ~0.90 - 0.92
@@ -111,7 +114,16 @@ Dưới đây là ma trận nhầm lẫn trên tập kiểm tra cho 5 lớp cả
 
 ![Ma Trận Nhầm Lẫn](./b00ec8d8-6f70-45a5-a38d-2c14ff476be9.png)
 
+### So sách với các nghiên cứu trước
+- Mô hình đạt weighted F1-score ~0.06, thấp hơn nhiều so với các nghiên cứu sử dụng bộ dữ liệu chuẩn và nhãn thủ công.
+- Nguyên nhân do nhãn suy luận chưa chuẩn, dữ liệu mất cân bằng và mô hình đơn giản.
+- Mục tiêu không phải là cạnh tranh độ chính xác, mà là khảo nghiệm quy trình và khai thác dữ liệu thực tế.
 
+### Ý nghĩa thực tiễn
+- Cung cấp khung tham khảo cho các dự án xử lý dữ liệu review sản phẩm không có nhãn cảm xúc.
+- Làm rõ thách thức và giới hạn của việc tạo nhãn tự động.
+- Gợi ý hướng phân tích xu hướng cảm xúc trên tập dữ liệu lớn.
+- Nền tảng để phát triển và cải tiến mô hình trong các nghiên cứu tiếp theo.
 
 
 ## 👥 Thành viên nhóm 9
