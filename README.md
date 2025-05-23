@@ -1,6 +1,6 @@
 # 📘 Đồ án môn học: Phương pháp nghiên cứu khoa học (PPNCKH)
 
-## 📝 Giới thiệu chung
+## 🌟 Giới thiệu dự án
 
 Đây là repo chứa toàn bộ nội dung đồ án môn học **Phương pháp nghiên cứu khoa học**.  
 Repo được tổ chức thành các thư mục tương ứng với các bài tập hàng tuần do giảng viên giao, các tài liệu phục vụ nghiên cứu, cũng như file ghi lại quá trình làm việc của từng thành viên trong nhóm.
@@ -9,30 +9,110 @@ Repo được tổ chức thành các thư mục tương ứng với các bài t
 
 ## 🎯 Giới thiệu dự án
 
-Dự án **Phân tích cảm xúc từ văn bản bằng mô hình học sâu** nhằm xây dựng và đánh giá các mô hình học sâu để nhận diện cảm xúc văn bản (tích cực 😄, tiêu cực 😞, trung tính 😐).
+### 🧠 Phân Loại Cảm Xúc Văn Bản Sử Dụng LSTM và Tokenization
 
-Chúng tôi sử dụng các kiến trúc nổi bật như:
-- **CNN**: Nhận diện đặc trưng cục bộ (n-gram).
-- **LSTM**: Xử lý ngữ cảnh tuần tự và phụ thuộc dài.
-- **BERT**: Hiểu ngữ cảnh hai chiều và biểu diễn ngữ nghĩa sâu.
+Dự án này tập trung vào việc phân loại cảm xúc trong các câu tiếng Anh bằng cách sử dụng mô hình mạng nơ-ron hồi tiếp LSTM kết hợp với kỹ thuật tokenization. Việc nhận diện cảm xúc là một tác vụ quan trọng trong Xử lý ngôn ngữ tự nhiên (NLP), đặc biệt hữu ích trong các ứng dụng như phân tích phản hồi khách hàng, chatbot, và theo dõi cảm xúc người dùng.
 
-Các mô hình sẽ được huấn luyện và so sánh hiệu suất trên các tập dữ liệu tiêu chuẩn như **IMDb Movie Reviews** và **Sentiment140**.
+### 🎯 Mục tiêu
 
----
+- Xây dựng mô hình học sâu để phân loại cảm xúc từ văn bản.
+- Ứng dụng LSTM để khai thác thông tin tuần tự trong dữ liệu ngôn ngữ.
+- Sử dụng tokenization và embedding để chuyển văn bản thành dạng số phục vụ huấn luyện.
 
-## 🎯 Mục tiêu
+### 🛠️ Công nghệ sử dụng
 
-- Xây dựng hệ thống nhận diện cảm xúc văn bản sử dụng học sâu.
-- So sánh hiệu năng giữa các mô hình CNN, LSTM và BERT.
-- Đề xuất mô hình hiệu quả nhất cho ứng dụng thực tế.
+- Python
+- TensorFlow / Keras
+- NumPy, Pandas
+- Matplotlib, Seaborn (phân tích & trực quan hóa dữ liệu)
+- NLTK / Keras Tokenizer (tiền xử lý ngôn ngữ)
 
----
+### 📊 Dữ liệu
 
-## 📌 Phân chia nhiệm vụ
+Bộ dữ liệu bao gồm các câu tiếng Anh được gán nhãn với 6 loại cảm xúc:
 
-Mọi vấn đề về chia nhiệm vụ cho từng thành viên được ghi lại trong [file excel](https://docs.google.com/spreadsheets/d/1BWWnReTbgG30a_czvhPYuBuIEiTJpfAB2ER254yJjf0/edit?usp=sharing) (cập nhật thường xuyên).
+- Vui (Joy)
+- Buồn (Sadness)
+- Giận dữ (Angry)
+- Ngạc nhiên (Surprise)
+- Yêu thương (Love)
 
----
+### 🧪 Quy trình thực hiện
+
+1. **Tiền xử lý văn bản**: Làm sạch, token hóa, padding chuỗi.
+2. **Mã hóa nhãn**: Chuyển các cảm xúc thành dạng one-hot encoding.
+3. **Xây dựng mô hình**: Thiết kế mô hình LSTM có lớp embedding.
+4. **Huấn luyện**: Đào tạo mô hình với dữ liệu đã xử lý.
+5. **Đánh giá & dự đoán**: Kiểm tra độ chính xác và dự đoán cảm xúc từ câu mới.
+
+### 🚀 Kết quả đạt được
+
+# Phân Loại Cảm Xúc Đánh Giá Sản Phẩm Sử Dụng Mô Hình LSTM
+
+Dự án này triển khai một mô hình học sâu LSTM để phân loại cảm xúc trong các đánh giá sản phẩm thành 5 loại cảm xúc chính: **Giận dữ, Vui vẻ, Yêu thương, Buồn bã, Ngạc nhiên**.
+
+## 📁 Dữ liệu
+
+- **Tập huấn luyện**: `reviews_train.txt`
+- **Tập kiểm tra**: `reviews_test.txt`
+- **Tập validation**: `reviews_val.txt`
+
+### 📌 Cách gán nhãn:
+Dựa vào số sao người dùng đánh giá sản phẩm:
+- 1 sao → Giận dữ (Anger)
+- 2 sao → Buồn bã (Sadness)
+- 3 sao → Ngạc nhiên (Surprise)
+- 4 sao → Vui vẻ (Joy)
+- 5 sao → Yêu thương (Love)
+
+> ⚠️ **Lưu ý**: Cách gán nhãn theo số sao chỉ mang tính chất ước lượng và không hoàn toàn chính xác với cảm xúc thực sự trong nội dung đánh giá.
+
+## 🧠 Kiến trúc mô hình
+
+- **Embedding layer**: sử dụng từ điển GloVe tiền huấn luyện
+- **LSTM layer**: học biểu diễn tuần tự của văn bản
+- **Dense layer**: đầu ra với hàm kích hoạt Softmax
+- **Loss function**: Categorical Crossentropy
+- **Optimizer**: Adam
+- **Batch size**: 32
+- **Epochs**: 8
+
+## 📊 Kết quả huấn luyện
+
+- **Độ chính xác trên tập huấn luyện**: > 0.95
+- **Độ chính xác trên tập validation**: ~0.90 - 0.92
+- **Loss**: giảm đều trong quá trình huấn luyện
+
+### 🧪 Đánh giá trên tập kiểm tra
+
+- **Số mẫu kiểm tra**: 70,143
+- **Micro avg Accuracy**: 0.15
+- **Weighted avg F1-score**: 0.06
+
+### 📋 Báo cáo phân loại:
+
+| Cảm xúc    | Precision | Recall | F1-score | Số mẫu |
+|------------|-----------|--------|----------|--------|
+| Giận dữ    | 0.15      | 0.94   | 0.26     | 10,133 |
+| Vui vẻ     | 0.18      | 0.07   | 0.10     | 7,994  |
+| Yêu thương | 0.58      | 0.01   | 0.02     | 42,004 |
+| Buồn bã    | 0.09      | 0.01   | 0.03     | 4,301  |
+| Ngạc nhiên | 0.06      | 0.00   | 0.01     | 5,711  |
+
+- Mô hình có xu hướng **dự đoán quá mức nhãn "Giận dữ"**, dẫn đến **Recall cao nhưng Precision thấp**
+- Hiệu suất thấp ở các cảm xúc như **Yêu thương**, **Buồn bã**, và **Ngạc nhiên** do:
+  - **Mất cân bằng dữ liệu**
+  - **Gán nhãn cảm xúc không chính xác từ số sao**
+  - **Văn bản đánh giá có thể mơ hồ, nhiều tầng ý nghĩa**
+
+### 📉 Ma Trận Nhầm Lẫn
+
+Dưới đây là ma trận nhầm lẫn trên tập kiểm tra cho 5 lớp cảm xúc đã chọn:
+
+![Ma Trận Nhầm Lẫn](./b00ec8d8-6f70-45a5-a38d-2c14ff476be9.png)
+
+
+
 
 ## 👥 Thành viên nhóm 9
 
