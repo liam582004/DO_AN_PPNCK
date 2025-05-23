@@ -35,7 +35,7 @@ Bộ dữ liệu bao gồm các câu tiếng Anh được gán nhãn với 6 lo�
 - Buồn 😢
 - Giận dữ 😠
 - Ngạc nhiên 😲
-- Yêu thương 😄
+- Yêu thương ❤️
 
 ### 🧪 Quy trình thực hiện
 
@@ -52,18 +52,22 @@ Bộ dữ liệu bao gồm các câu tiếng Anh được gán nhãn với 6 lo�
 Dự án này triển khai một mô hình học sâu LSTM để phân loại cảm xúc trong các đánh giá sản phẩm thành 5 loại cảm xúc chính: **Giận dữ, Vui vẻ, Yêu thương, Buồn bã, Ngạc nhiên**.
 
 ## 📁 Dữ liệu
- Amazon Product Reviews 2023 (truy cập tại https://amazon-reviews-2023.github.io), 
-- **Tập huấn luyện**: 561136 mẫu, chiếm ~80% tổng dữ liệu] 
+
+Amazon Product Reviews 2023 (truy cập tại https://amazon-reviews-2023.github.io),
+
+- **Tập huấn luyện**: 561136 mẫu, chiếm ~80% tổng dữ liệu
 - **Tập kiểm tra**: 70142 mẫu, chiếm ~10% tổng dữ liệu
-- **Tập validation**: 70143 mẫu, chiếm ~10% tổng dữ liệu 
+- **Tập validation**: 70143 mẫu, chiếm ~10% tổng dữ liệu
 
 ### 📌 Cách gán nhãn:
+
 Dựa vào số sao người dùng đánh giá sản phẩm:
-- 1 sao → Giận dữ (Anger)
-- 2 sao → Buồn bã (Sadness)
-- 3 sao → Ngạc nhiên (Surprise)
-- 4 sao → Vui vẻ (Joy)
-- 5 sao → Yêu thương (Love)
+
+- 1 sao → 😠
+- 2 sao → 😢
+- 3 sao → 😲
+- 4 sao → 😄
+- 5 sao → ❤️
 
 > ⚠️ **Lưu ý**: Cách gán nhãn theo số sao chỉ mang tính chất ước lượng và không hoàn toàn chính xác với cảm xúc thực sự trong nội dung đánh giá.
 
@@ -81,7 +85,6 @@ Dựa vào số sao người dùng đánh giá sản phẩm:
 
 ![Đồ thị độ chính xác và hàm mất mát](images/c06c6534-1410-490c-ad24-207c9c109584.png)
 
-
 - **Độ chính xác trên tập huấn luyện**: > 0.95
 - **Độ chính xác trên tập validation**: ~0.90 - 0.92
 - **Loss**: giảm đều trong quá trình huấn luyện
@@ -95,7 +98,7 @@ Dựa vào số sao người dùng đánh giá sản phẩm:
 ### 📋 Báo cáo phân loại:
 
 | Cảm xúc    | Precision | Recall | F1-score | Số mẫu |
-|------------|-----------|--------|----------|--------|
+| ---------- | --------- | ------ | -------- | ------ |
 | Giận dữ    | 0.15      | 0.94   | 0.26     | 10,133 |
 | Vui vẻ     | 0.18      | 0.07   | 0.10     | 7,994  |
 | Yêu thương | 0.58      | 0.01   | 0.02     | 42,004 |
@@ -115,24 +118,26 @@ Dưới đây là ma trận nhầm lẫn trên tập kiểm tra cho 5 lớp cả
 ![Ma Trận Nhầm Lẫn](./b00ec8d8-6f70-45a5-a38d-2c14ff476be9.png)
 
 ### So sách với các nghiên cứu trước
+
 - Mô hình đạt weighted F1-score ~0.06, thấp hơn nhiều so với các nghiên cứu sử dụng bộ dữ liệu chuẩn và nhãn thủ công.
 - Nguyên nhân do nhãn suy luận chưa chuẩn, dữ liệu mất cân bằng và mô hình đơn giản.
 - Mục tiêu không phải là cạnh tranh độ chính xác, mà là khảo nghiệm quy trình và khai thác dữ liệu thực tế.
 
 ### Ý nghĩa thực tiễn
+
 - Cung cấp khung tham khảo cho các dự án xử lý dữ liệu review sản phẩm không có nhãn cảm xúc.
 - Làm rõ thách thức và giới hạn của việc tạo nhãn tự động.
 - Gợi ý hướng phân tích xu hướng cảm xúc trên tập dữ liệu lớn.
 - Nền tảng để phát triển và cải tiến mô hình trong các nghiên cứu tiếp theo.
 
+## 📌 Phân chia nhiệm vụ
+
+Mọi vấn đề về chia nhiệm vụ cho từng thành viên được ghi lại trong [file excel](https://docs.google.com/spreadsheets/d/1BWWnReTbgG30a_czvhPYuBuIEiTJpfAB2ER254yJjf0/edit?usp=sharing).
 
 ## 👥 Thành viên nhóm 9
 
-| Họ và tên         | Email                                           | GitHub                                         | Website cá nhân                                  |
-|-------------------|-------------------------------------------------|------------------------------------------------|-------------------------------------------------|
-| Hồ Hưng Lộc       | [hohungloc58@gmail.com](mailto:hohungloc58@gmail.com) | [github.com/liam582004](https://github.com/liam582004) | [liam582004.github.io/portfolio-cv](https://liam582004.github.io/portfolio-cv/) |
-| Nguyễn Trường Sinh | [emailcuasinh@gmail.com](mailto:emailcuasinh@gmail.com) | [github.com/SN1PE7](https://github.com/SN1PE7) | [sn1pe7.github.io](https://sn1pe7.github.io/) |
-| Hoàng Sỹ Khiêm    | [sgu3121410263@gmail.com](sgu3121410263@gmail.com) | [github.com/khiemHoang141](https://github.com/khiemHoang1410) | [khiemhoang1410.github.io](https://khiemhoang1410.github.io) |
-
-
-
+| Họ và tên          | Email                                                   | GitHub                                                        | Website cá nhân                                                                 |
+| ------------------ | ------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| Hồ Hưng Lộc        | [hohungloc58@gmail.com](mailto:hohungloc58@gmail.com)   | [github.com/liam582004](https://github.com/liam582004)        | [liam582004.github.io/portfolio-cv](https://liam582004.github.io/portfolio-cv/) |
+| Nguyễn Trường Sinh | [emailcuasinh@gmail.com](mailto:emailcuasinh@gmail.com) | [github.com/SN1PE7](https://github.com/SN1PE7)                | [sn1pe7.github.io](https://sn1pe7.github.io/)                                   |
+| Hoàng Sỹ Khiêm     | [sgu3121410263@gmail.com](sgu3121410263@gmail.com)      | [github.com/khiemHoang141](https://github.com/khiemHoang1410) | [khiemhoang1410.github.io](https://khiemhoang1410.github.io)                    |
