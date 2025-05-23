@@ -83,7 +83,7 @@ Dựa vào số sao người dùng đánh giá sản phẩm:
 
 ## 📊 Kết quả huấn luyện
 
-![Đồ thị độ chính xác và hàm mất mát](images/c06c6534-1410-490c-ad24-207c9c109584.png)
+![Đồ thị độ chính xác và hàm mất mát](./imgs/hammatmat.png)
 
 - **Độ chính xác trên tập huấn luyện**: > 0.95
 - **Độ chính xác trên tập validation**: ~0.90 - 0.92
@@ -115,7 +115,7 @@ Dựa vào số sao người dùng đánh giá sản phẩm:
 
 Dưới đây là ma trận nhầm lẫn trên tập kiểm tra cho 5 lớp cảm xúc đã chọn:
 
-![Ma Trận Nhầm Lẫn](./b00ec8d8-6f70-45a5-a38d-2c14ff476be9.png)
+![Ma Trận Nhầm Lẫn](./imgs/matrannhamlan.png)
 
 ### So sách với các nghiên cứu trước
 
